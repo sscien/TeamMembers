@@ -1,13 +1,13 @@
 # If your input start from WXS fastqs
 
-## step1 
+## step1 (Terminal 1)
 ```
 export LSF_DOCKER_VOLUMES="/storage1/fs1/dinglab/Active:/storage1/fs1/dinglab/Active /scratch1/fs1/dinglab:/scratch1/fs1/dinglab"
 export PATH="/miniconda/envs/pecgs/bin:$PATH"
 bsub -q dinglab-interactive -G compute-dinglab -Is -a 'docker(estorrs/pecgs-pipeline:0.0.1)' '/bin/bash'
 ```
 
-## step2
+## step2 (Terminal 1)
 
 ```
 rm -r /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/fq_bam/*
