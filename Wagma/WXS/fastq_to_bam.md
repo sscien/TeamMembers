@@ -47,11 +47,29 @@ python /storage1/fs1/dinglab/Active/Projects/estorrs/pecgs-pipeline/src/compute1
 # If your input start from WXS bams
 
 ## Wagma WXS bam Tindaisy run
+
+## step 1
+
+```
+export LSF_DOCKER_VOLUMES="/storage1/fs1/dinglab/Active:/storage1/fs1/dinglab/Active /scratch1/fs1/dinglab:/scratch1/fs1/dinglab"
+export PATH="/miniconda/envs/pecgs/bin:$PATH"
+
+bsub -q dinglab-interactive -G compute-dinglab -Is -a 'docker(estorrs/pecgs-pipeline:0.0.1)' '/bin/bash'
+
+```
+
+## step 2
+
 ```
 mkdir - p /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/
+
+```
+## step 3
+```
 python /storage1/fs1/dinglab/Active/Projects/ysong/Projects/pecgs-cwl/pecgs-pipeline/src/compute1/generate_run_commands.py make-run  --queue general pecgs_TN_wxs_bam /storage1/fs1/dinglab/Active/Projects/ysong/Projects/Team_Members/Wagma/wxs_bam_run_list.txt /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/
 ```
 
+## step 4
 ```
 bash /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/1.run_jobs.sh
 ```
