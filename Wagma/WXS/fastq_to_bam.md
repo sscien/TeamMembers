@@ -49,7 +49,7 @@ python /storage1/fs1/dinglab/Active/Projects/estorrs/pecgs-pipeline/src/compute1
 ## Wagma WXS bam Tindaisy run
 ```
 mkdir - p /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/
-python /storage1/fs1/dinglab/Active/Projects/ysong/Projects/pecgs-cwl/pecgs_wxs_bam_Tindaisy_v2023_03/src/compute1/generate_run_commands.py make-run  --queue general pecgs_TN_wxs_bam /storage1/fs1/dinglab/Active/Projects/ysong/Projects/Team_Members/Wagma/wxs_bam_run_list.txt /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/
+python /storage1/fs1/dinglab/Active/Projects/ysong/Projects/pecgs-cwl/pecgs-pipeline/src/compute1/generate_run_commands.py make-run  --queue general pecgs_TN_wxs_bam /storage1/fs1/dinglab/Active/Projects/ysong/Projects/Team_Members/Wagma/wxs_bam_run_list.txt /scratch1/fs1/dinglab/Active/Projects/ysong/Wagma/wxs_bam/
 ```
 
 ```
